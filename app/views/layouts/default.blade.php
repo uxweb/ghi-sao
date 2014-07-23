@@ -66,14 +66,6 @@
                     </ul>
                     <!-- menu a modulos de app -->
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Maquinaria <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{-- route('maquinaria.index') --}}">Equipos</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                        </li>
                     </ul>
                 @endif
             </div>
@@ -92,7 +84,7 @@
     </section>
 
     {{-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> --}}
-    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
     {{-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> --}}
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     @yield('scripts')
