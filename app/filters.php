@@ -43,7 +43,7 @@ Route::filter('auth', function()
 		}
 		else
 		{
-			return Redirect::guest('login');
+			return Redirect::guest('/');
 		}
 	}
 });
@@ -87,4 +87,12 @@ Route::filter('csrf', function()
 	{
 		throw new Illuminate\Session\TokenMismatchException;
 	}
+});
+
+Route::filter('is_obra_selected', function()
+{
+    if ( ! Session::get('is_obra_selected') )
+    {
+        return Redirect::guest('obra/');
+    }
 });

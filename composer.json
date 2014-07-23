@@ -4,8 +4,12 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"way/generators": "2.*"
 	},
+    "require-dev": {
+        "fzaninotto/faker": "v1.3.0"
+    },
 	"autoload": {
 		"classmap": [
 			"app/commands",
@@ -14,7 +18,10 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
-		]
+		],
+        "psr-4": {
+            "GhiSao\\": "app/GhiSao"
+        }
 	},
 	"scripts": {
 		"post-install-cmd": [

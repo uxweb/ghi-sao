@@ -46,42 +46,66 @@ return array(
 
 	'connections' => array(
 
-		'sqlite' => array(
-			'driver'   => 'sqlite',
-			'database' => __DIR__.'/../database/production.sqlite',
-			'prefix'   => '',
-		),
+        'mysql' => array(
+            'driver'    => 'mysql',
+            'host'      => getenv('DB_HOST_INTRANET'),
+            'database'  => getenv('DB_NAME_INTRANET'),
+            'username'  => getenv('DB_USERNAME'),
+            'password'  => getenv('DB_PASSWORD'),
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+        ),
 
-		'mysql' => array(
-			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'forge',
-			'username'  => 'forge',
-			'password'  => '',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
-		),
+//        'SAO1814' => array(
+//            'driver'   => 'sqlsrv',
+//            'host'     => getenv('DB_HOST_SAO'),
+//            'database' => 'SAO1814',
+//            'username' => getenv('DB_USERNAME'),
+//            'password' => getenv('DB_PASSWORD'),
+//            'prefix'   => '',
+//            'type'	   => 'OBRA',
+//        ),
 
-		'pgsql' => array(
-			'driver'   => 'pgsql',
-			'host'     => 'localhost',
-			'database' => 'forge',
-			'username' => 'forge',
-			'password' => '',
-			'charset'  => 'utf8',
-			'prefix'   => '',
-			'schema'   => 'public',
-		),
+        'CUTZAMALA' => array(
+            'driver'   => 'sqlsrv',
+            'host'     => getenv('DB_HOST_SAO'),
+            'database' => 'SAO1814_CUTZAMALA',
+            'username' => getenv('DB_USERNAME'),
+            'password' => getenv('DB_PASSWORD'),
+            'prefix'   => '',
+            'type'	   => 'OBRA',
+        ),
 
-		'sqlsrv' => array(
-			'driver'   => 'sqlsrv',
-			'host'     => 'localhost',
-			'database' => 'database',
-			'username' => 'root',
-			'password' => '',
-			'prefix'   => '',
-		),
+        'CIRCUITO' => array(
+            'driver'   => 'sqlsrv',
+            'host'     => getenv('DB_HOST_SAO'),
+            'database' => 'SAO1814_CIRCUITO',
+            'username' => getenv('DB_USERNAME'),
+            'password' => getenv('DB_PASSWORD'),
+            'prefix'   => '',
+            'type'	   => 'OBRA',
+        ),
+
+        'ATLACOMULCOXIV' => array(
+            'driver'   => 'sqlsrv',
+            'host'     => getenv('DB_HOST_SAO'),
+            'database' => 'SAO1814_ATLACOMULCO_XIV',
+            'username' => getenv('DB_USERNAME'),
+            'password' => getenv('DB_PASSWORD'),
+            'prefix'   => '',
+            'type'	   => 'OBRA',
+        ),
+
+//        'SPM_MOBILIARIO' => array(
+//            'driver'   => 'sqlsrv',
+//            'host'     => getenv('DB_HOST_SAO'),
+//            'database' => 'SAO1814_SPM_MOBILIARIO',
+//            'username' => getenv('DB_USERNAME'),
+//            'password' => getenv('DB_PASSWORD'),
+//            'prefix'   => '',
+//            'type'	   => 'OBRA',
+//        ),
 
 	),
 
