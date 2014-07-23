@@ -1,4 +1,4 @@
-ghi_sao
+GHI SAO
 =======
 
-Base para el nuevo sistema de administracion de obra con PHP Laravel
+Base para el nuevo sistema de administración de obra con PHP Laravel
